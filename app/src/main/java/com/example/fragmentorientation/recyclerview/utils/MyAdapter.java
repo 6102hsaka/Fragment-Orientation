@@ -1,20 +1,20 @@
-package com.example.fragmentorientation;
+package com.example.fragmentorientation.recyclerview.utils;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fragmentorientation.R;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private Context context;
-    private  String[] items, descriptions;
+    private String[] items, descriptions;
 
     public MyAdapter(Context context, String[] items, String[] descriptions) {
         this.context = context;
