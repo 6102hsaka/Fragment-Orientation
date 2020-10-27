@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Fragment Orientation</string>
+
+    <string name="img_ctx">Dummy Image</string>
+
+    <string-array name="list_item">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+        <item>Fifth</item>
+        <item>Sixth</item>
+        <item>Seventh</item>
+        <item>Eighth</item>
+        <item>Ninth</item>
+        <item>Tenth</item>
+    </string-array>
+
+    <string-array name="list_description">
+        <item>Description for First. Then some dummy text.</item>
+        <item>Description for Second. Then some dummy text.</item>
+        <item>Description for Third. Then some dummy text.</item>
+        <item>Description for Fourth. Then some dummy text.</item>
+        <item>Description for Fifth. Then some dummy text.</item>
+        <item>Description for Sixth. Then some dummy text.</item>
+        <item>Description for Seventh. Then some dummy text.</item>
+        <item>Description for Eighth. Then some dummy text.</item>
+        <item>Description for Ninth. Then some dummy text.</item>
+        <item>Description for Tenth. Then some dummy text.</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
