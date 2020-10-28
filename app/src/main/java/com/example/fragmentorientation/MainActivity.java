@@ -2,7 +2,13 @@ package com.example.fragmentorientation;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Switch;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fragmentorientation.api.data.AvengersList;
@@ -24,6 +30,29 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Item
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.menu_item_1:
+                Toast.makeText(this, R.string.menu_item_1+" selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.menu_item_2:
+                Toast.makeText(this, R.string.menu_item_2+" selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.menu_item_3:
+                Toast.makeText(this, R.string.menu_item_3+" selected", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
     public void send(int pos) {
         if(descFragment!=null) {
             descFragment.setDescription(AvengersList.getAvengers().get(pos));
@@ -32,6 +61,5 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Item
             intent.putExtra("pos", pos);
             startActivity(intent);
         }
-
     }
 }
