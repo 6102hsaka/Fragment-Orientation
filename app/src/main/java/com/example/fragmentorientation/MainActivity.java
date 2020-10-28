@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fragmentorientation.api.data.AvengersList;
+
 public class MainActivity extends AppCompatActivity implements ListFragment.ItemCommunicator {
 
     private ListFragment listFragment;
@@ -22,6 +24,6 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Item
 
     @Override
     public void send(int pos) {
-        descFragment.setDescription(getResources().getStringArray(R.array.list_description)[pos]);
+        descFragment.setDescription(AvengersList.getAvengers().get(pos));
     }
 }
