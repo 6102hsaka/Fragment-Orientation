@@ -5,15 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/root_linear_main">
-
+    tools:context=".DescriptionActivity">
 
     <fragment
-        android:id="@+id/list_fragment_main"
-        android:name="com.example.fragmentorientation.ListFragment"
+        android:id="@+id/desc_fragment_main"
+        android:name="com.example.fragmentorientation.DescFragment"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

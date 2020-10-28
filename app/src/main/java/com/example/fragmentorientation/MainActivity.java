@@ -1,5 +1,6 @@
 package com.example.fragmentorientation;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Item
 
     @Override
     public void send(int pos) {
-        descFragment.setDescription(AvengersList.getAvengers().get(pos));
+        if(descFragment!=null) {
+            descFragment.setDescription(AvengersList.getAvengers().get(pos));
+        } else {
+            Intent intent = new Intent(this, DescriptionActivity.class);
+            intent.putExtra("pos", pos);
+            startActivity(intent);
+        }
+
     }
 }
